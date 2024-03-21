@@ -1,0 +1,104 @@
+user    : TGR_GROUP51
+password: RL533I
+
+IP Address(Hardware): 192.168.1.160
+IP Address(server)  : 192.168.1.161
+IP Address(MatLab)  : 192.168.1.162
+subnetmask: 255.255.255.0
+IPv4
+
+ap         : 192.168.1.1
+MQTT       : 192.168.1.2
+Data Server: 192.168.1.3 
+
+day1 
+
+
+###testDay1###
+
+Connect to api server and get data to database
+
+Contestor can deploy server (fastapi + mongodb) 
+can connect to mqtt server and pub/sub data
+can connect to api server (with request)
+can connect to database 
+
+can push data to database by get the data with id from api server
+example http://192.168.1.3:7078/xxx
+
+
+ID start from 500 - 1000
+
+
+Topic : /TGR_[GroupNumber] 
+ex: /TGR_22
+
+Publish : Hello TGR_[GroupNumber]
+ex: Hello TGR_22
+
+day2
+
+Kriengsak Treeprapin10:52
+import streamlit as st
+
+st.title("TEST")
+st.header("header")
+st.text("Welcome to TGR2023")
+st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+Kriengsak Treeprapin10:55
+import streamlit as st
+
+# Using object notation
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
+# Using "with" notation
+with st.sidebar:
+    add_radio = st.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
+Kriengsak Treeprapin11:01
+import streamlit as st
+import streamlit as st
+
+# Using object notation
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
+# Using "with" notation
+with st.sidebar:
+    add_radio = st.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
+
+st.title("TEST")
+st.header("header")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric(label="Temperature", value="70 °F", delt
+dvz-wuez-wvu
+
+
+
+*****Day2 Problem*****
+ 
+ทำแล้ว-กำหนด file genMockdata.py ให้เพื่อ สร้างข้อมูลจำลองลงฐานข้อมูล mongodb
+จากข้อมูลที่ใส่เข้าไปใน mongodb 
+
+ให้ทำการสร้าง Dashboard ด้วย Streamlit เพื่อแสดงข้อมูลน้ำต่าง ๆ ที่นักศึกษาคิดว่าจำเป็นในการตัดสินใจกับการแจ้งเตือนน้ำ 
+
+แสดงข้อมูลที่ต้องการในรูปแบบ charts อย่างน้อย 1
+แสดงข้อมูลที่ต้องการในรูปแบบ graph อย่างน้อย 2
+
+แสดงข้อมูลที่ต้องการในรูปแบบ metrics อย่างน้อย 2
+ปรับรูปแบบ หน้าตาให้เหมาะสมกับการใช้งานในระบบ การใช้สีสันต่าง ๆ
+
+ใช้ st.metric ในการแสดงค่า WaterDataBack ล่าสุด ที่มีค่าเพิ่มขึ้นหรือลดลงจากก่อนค่าก่อนหน้า
+

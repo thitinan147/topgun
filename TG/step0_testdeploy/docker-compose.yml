@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    image: myfastapi1
+    container_name: fastapi
+    volumes:
+      - ./fastapi/app:/code/app
+    ports:
+      - "80:80"
